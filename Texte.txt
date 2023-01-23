@@ -1,0 +1,50 @@
+﻿// ######################################################################################################################################################
+// #                                                                                                                                                    #
+B.Ok_T(L"");
+B.Ok_T(L") : Ok !");
+B.Ok_W(L"");
+wstring wstr = L"";
+wstr += 
+to_wstring()
+
+// ######################################################################################################################################################
+// #                                                                                                                                                    #
+// # Console_Lire_txt                                         #
+// #                                                                                                                                                    #
+// ######################################################################################################################################################
+
+
+const void Console_Lire_txt(wstring lire, int in, int out)
+{
+    // https://openclassrooms.com/forum/sujet/couleur-dans-la-console-en-c-63227
+    //void color(int t, int f)
+    //{
+    //    HANDLE H = GetStdHandle(STD_OUTPUT_HANDLE);
+    //    SetConsoleTextAttribute(H, f * 16 + t);
+    //}
+
+    /*
+        0 : noir
+        1 : bleu foncé
+        2 : vert
+        3 : bleu - gris
+        4 : marron
+        5 : pourpre
+        6 : kaki
+        7 : gris clair
+        8 : gris
+        9 : bleu
+        10 : vert fluo
+        11 : turquoise
+        12 : rouge
+        13 : rose fluo
+        14 : jaune fluo
+        15 : blanc
+        */
+    if (lire != L"" && in != 0 && out != 0)
+    {
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), in);
+        wcout << lire;
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), out);
+    }
+}
